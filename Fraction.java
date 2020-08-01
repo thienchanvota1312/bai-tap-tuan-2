@@ -83,5 +83,19 @@ public class Fraction {
         phanSoThuong.reduce();
         System.out.println("Thương hai phân số = " + phanSoThuong.numerator + "/" + phanSoThuong.denominator);
     }
-    
+    /**
+    equals
+    */
+    public boolean equals(Object object){
+        if (obj instanceof Fraction) {
+            Fraction other = (Fraction) object;
+            int numerator_a = this.numerator * other.getdenominator();
+            int numerator_b = other.getnumerator() * this.denominator;
+
+            if(numerator_a == numerator_b)
+                return true;
+        }
+        return false;
+    }
+   
 }
